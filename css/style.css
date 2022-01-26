@@ -161,7 +161,7 @@ height: 42px;
 }
 
 .main-header {
-  padding: 0px;
+  padding: 1px;
   min-height: 278px;
   background-color: var(--basic-background)
 }
