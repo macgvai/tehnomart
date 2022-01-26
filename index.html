@@ -2,23 +2,30 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="icon/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icon/favicon/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,600;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/style.css"> -->
     <title>Интернет-магазин Техномарт</title>
   </head>
   <body class="page-body" >
     <header>
       <div class="top-header">
         <div class="container">
-          <a class="top-header-logo"><img src="logo/logo.png" alt="logo"></a>
-          <label class="top-header-search-icon" for="header_search">
-          <img src="icon/icon-search.svg" alt="search">
-          Поиск:</label>
-          <input class="top-header-search" type="search" id="header_search">
-
+          <a class="logo">
+            <div class="logo-wrap">
+              <img src="logo/logo-technomart.svg" width="106.83" height="16.9" alt="logo">
+            </div>
+          </a>
+          <div class="search-wrap">
+            <label class="top-header-search-icon" for="header_search">
+                <img src="icon/icon-search.svg" alt="search">
+            </label>
+            <input class="top-header-search" type="search" id="header_search" placeholder="Поиск: ">
+          </div>
           <ul class="top-header-list">
             <li class="top-header-item">
               <a href="#">
@@ -180,7 +187,6 @@
               Ведь мы неплохо заработаем, <br>
               поднимая его на ваш этаж!</p>
               <img src="img/delivery.png" width="619" height="283" alt="">
-              <button class="btn">отправить заявку</button>
           </li>
           <li class="services-descr-item">
             <p>Гарантия</p>
@@ -190,7 +196,6 @@
                гарантии. Мы обменяем сгоревший товар на новый. <br>
                Дом уж восстановите как-нибудь сами.</p>
               <img src="img/guarantee.png" width="389" height="283" alt="">
-              <button class="btn">отправить заявку</button>
           </li>
           <li class="services-descr-item">
             <p>Кредит</p>
@@ -279,11 +284,12 @@
 
         <button class="btn">Отправить</button>
       </form>
-      <button type="button">Закрыть</button>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
-    <section class="modal">
+
+    <section class="modal modal-map">
       <map name="map">карта</map>
-      <button type="button">Закрыть</button>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>

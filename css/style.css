@@ -1,0 +1,168 @@
+/* fonts */
+@font-face {
+	font-family: 'Cuprum';
+	src: local('Cuprum'), local('Cuprum-Regular'),
+    url('../fonts/cuprum.woff2') format('woff2'),
+		url('../fonts/cuprum.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  src: local('Cuprum'), local('Cuprum Bold'),
+    url('../fonts/cuprumbold.woff2') format('woff2'),
+    url('../fonts/cuprumbold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  src: local('Cuprum'), local('Regular italic'),
+    url('../fonts/cuprumbolditalic.woff2') format('woff2'),
+    url('../fonts/cuprumitalic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: local('PT Sans'), local('PT Sans Regular'),
+    url('../fonts/ptsans.woff2') format('woff2'),
+    url('../fonts/ptsans.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: local('PT Sans'), local('PT Sans Bold'),
+    url('../fonts/ptsansbold.woff2') format('woff2'),
+    url('../fonts/ptsansbold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Variables */
+:root {
+  --basic-black: #000000;
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-grey: #3D546F;
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+  --basic-header-bottom: #293449;
+  --white: #FFFFFF;
+  --special-ylellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+  --special-yellowlight: #FFD180;
+  --focus: #5FBB2D;
+  --error: #BA2732;
+  --activ-white: rgba(255, 255, 255, 0.5);
+  --activ-header-bottom: #161D29;
+}
+
+/* Global */
+body {
+  min-width: 940px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+	font-style: normal;
+  color: var(--basic-black);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.top-header {
+  min-height: 42px;
+  width: 100%;
+  background-color: var(--basic-header-bottom);
+}
+
+.logo-wrap {
+  width: 220px;
+  height: 47px;
+  background-color:var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  text-align: center;
+}
+
+.logo-wrap:active {
+  background-color:var(--error)
+}
+
+.logo-wrap img {
+  margin-top: 13px;
+}
+
+.top-header-search {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.search-wrap {
+width: 271px;
+height: 42px;
+}
+
+.search-wrap:hover,
+.search-wrap:focus {
+  background-color: var(--white)
+}
+
+
+.top-header-search-icon img {
+  width: 17px;
+  height: 17px;
+}
+
+.top-header-list {
+  margin: 0;
+  list-style-type: none;
+}
+
+.top-header-item a {
+  color: var(--white);
+}
+
+.top-header-list li {
+  width: 150px;
+  height: 42px;
+}
+
+.top-header-item:active {
+  background-color: var(--activ-header-bottom)
+}
+
+.top-header-item:last-child {
+  background-color: var(--basic-green)
+}
+.top-header-item:last-child:hover,
+.top-header-item:last-child:focus {
+  background-color: var(--focus)
+}
+.top-header-item:last-child:active {
+  background-color: var(--basic-green);
+}
+.top-header-item:last-child a:active {
+  color: var(--activ-white);
+}
+
+.main-header {
+  min-height: 278px;
+  background-color: var(--basic-background)
+}
+
+
