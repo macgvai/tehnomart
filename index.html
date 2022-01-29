@@ -258,7 +258,7 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, <br>
             заехав в наш офис:</p>
-          <img src="img/map.jpg" alt="">
+          <img src="img/map.jpg" width="300" height="158" alt="">
           <div class="btn btn-delivery-contacts">
             <a href="#">Заблудились? Напишите нам!</a>
           </div>
@@ -268,7 +268,11 @@
     <footer class="main-footer">
       <div class="top-footer">
         <h2>Контакты</h2>
-        <a class="top-footer-logo" ><img src="logo/logo.png" alt="logo"></a>
+        <a class="logo">
+          <div class="logo-wrap logo-bottom">
+            <img src="logo/logo-technomart.svg" width="106.83" height="16.9" alt="logo">
+          </div>
+        </a>
         <nav class="top-footer-nav">
           <ul class="top-footer-nav-list">
             <li><a href="#">Компания</a></li>
@@ -293,9 +297,9 @@
         <p class="bottom-footer-copyrite">© 2010–2021 Компания «Техномарт» <br>
         Все права защищены</p>
         <ul class="bottom-footer-social-list">
-          <li><a class="social-button" href="#"><img src="icon/icon-vk.svg" alt="vk"></a></li>
-          <li><a class="social-button" href="#"><img src="icon/icon-fb.svg" alt="fb"></a></li>
-          <li><a class="social-button" href="#"><img src="icon/icon-insta.svg" alt="insta"></a></li>
+          <li><a class="social-button" href="#"><img src="icon/icon-vk.svg" width="26" height="15" alt="vk"></a></li>
+          <li><a class="social-button" href="#"><img src="icon/icon-fb.svg" width="12" height="22" alt="fb"></a></li>
+          <li><a class="social-button" href="#"><img src="icon/icon-insta.svg" width="21" height="21" alt="insta"></a></li>
         </ul>
         <div class="feedback">
           <p>Обратная связь:</p>
@@ -307,7 +311,11 @@
         </div>
       </div>
     </footer>
+
+
+
     <section class="modal">
+      <div class="modal-head"></div>
       <form class="feedback-form" action="post" method="post">
         <label for="Feedback-name">Ваше имя:</label>
         <input class="feedback-name" id="Feedback-name" type="text" name="name" placeholder="Имя Фамилия">
@@ -317,8 +325,9 @@
 
         <label for="Feedback-text">Текст письма:</label>
         <textarea name="text" id="Feedback-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-
-        <button class="btn">Отправить</button>
+        <div class="modal-bottom">
+                  <button class="btn btn-modal">Отправить</button>
+        </div>
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
