@@ -250,7 +250,7 @@ height: 42px;
   color: var(--basic-red);
 }
 
-.main-header-registration:hover a {
+.main-header-registration:active a {
   color: var(--basic-greylight);
 }
 
