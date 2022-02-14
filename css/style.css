@@ -259,11 +259,10 @@ height: 42px;
   color: var(--basic-red);
 }
 
-.main-header-phone-wrap {
-  border: 3px solid var(--white);
-}
 
 .main-header-phone {
+  border: 3px solid var(--white);
+
   font-weight: 700;
   font-size: 21px;
   line-height: 30px;
@@ -500,6 +499,12 @@ height: 42px;
 .popular-list,
 .popular-item-list {
   list-style-type: none;
+}
+
+.popular-item-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .popular-list-layout {
@@ -885,6 +890,7 @@ height: 42px;
 /* catalog */
 .breadcrumbs {
   list-style-type: none;
+  grid-column: 1/-1;
 }
 
  .breadcrumbs-item a {
@@ -898,12 +904,17 @@ height: 42px;
  .catalog-title-wrap {
   height: 89px;
   background: var(--basic-background);
+  grid-column: 1/-1;
 }
 
 .catalog-title {
   font-size: 30px;
   text-transform: uppercase;
   color: var(--basic-black-menu)}
+
+.filter {
+  grid-column: 1/2;
+}
 
 
 .filter-title {
@@ -951,6 +962,9 @@ height: 42px;
   color: var(--basic-black);
 }
 
+.catalog-items {
+  grid-column: 2/-1;
+}
 
 .catalog-items-sorting-wrap {
   background-color: var(--basic-filter);
@@ -986,6 +1000,7 @@ height: 42px;
 }
 .pagination-list {
   list-style-type: none;
+
 }
 
 .pagination-item a {
@@ -1000,6 +1015,7 @@ height: 42px;
 
 .about-perforators {
   background-color: var(--basic-background);
+  grid-column: 1/-1;
 }
 .about-perforators h2 {
   font-size: 30px;
@@ -1050,4 +1066,10 @@ height: 42px;
 
 .modal-bottom {
   grid-column: 1/-1;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
