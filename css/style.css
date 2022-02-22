@@ -69,6 +69,7 @@
   --suggestions-hover: rgba(197,197,197, 0.3);
   --suggestions-active: rgba(169,169,169, 0.3);
   --catalog-sorting-black: rgba(0, 0, 0, 0.3);
+  --input-hr: rgba(0, 0, 0, 0.0001);
   --background-popular: #F9F5F0;
   --border-items: #EAEAEA;
   --old-price: #A9A9A9;
@@ -163,6 +164,10 @@ img {
 
 header {
   margin-bottom: 59px;
+}
+
+.inner-page header {
+  margin-bottom: 29px;
 }
 
 .top-header {
@@ -618,6 +623,7 @@ height: 42px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  margin-bottom: 48px;
 }
 
 .popular-list-layout {
@@ -1127,6 +1133,15 @@ height: 42px;
 .breadcrumbs {
   list-style-type: none;
   grid-column: 1/-1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items:flex-end;
+}
+
+.breadcrumbs-item {
+  margin-right: 40px;
 }
 
  .breadcrumbs-item a {
@@ -1141,20 +1156,45 @@ height: 42px;
   height: 89px;
   background: var(--basic-background);
   grid-column: 1/-1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 29px;
 }
 
 .catalog-title {
   font-size: 30px;
   text-transform: uppercase;
-  color: var(--basic-black-menu)}
+  color: var(--basic-black-menu);
+  margin: 0;
+}
+
 
 .filter {
   grid-column: 1/2;
 }
 
+.filter-line {
+  height: 1px;
+  background-color: var(--border-items);
+  margin-bottom: 16px;
+}
+
+.filter fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 
 .filter-title {
   background-color: var(--basic-filter);
+  height: 38px;
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
+  margin-bottom: 15px;
+  border-radius: 3px;
 }
 
 .filter-title p {
@@ -1163,6 +1203,7 @@ height: 42px;
   font-size: 13px;
   color: var(--basic-black);
   text-transform: uppercase;
+  margin: 0;
 }
 
 
@@ -1174,12 +1215,55 @@ height: 42px;
   color: var(--basic-black);
 }
 
-.filter-range-wrap {
-  background-color: var(--basic-filter);
+.filter-range-fieldset  legend {
+  margin-bottom: 11px;
 }
 
-.filter-range-text-item {
+.filter-range-wrap {
   background-color: var(--basic-filter);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 9px;
+  border-radius: 3px;
+
+}
+
+.filter-range-text-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+
+.filter-range-text-item input {
+  width: 95px;
+  height: 38px;
+  background-color: var(--basic-filter);
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  outline: none;
+}
+
+.filter-range-text-- {
+  width: 10px;
+  height: 1px;
+  background-color: var(--basic-black);
+}
+
+.checkbox-manufacturers-fieldset legend {
+  margin-bottom: 15px;
+}
+
+.checkbox-manufacturers {
+  margin-bottom: 16px;
+}
+
+.checkbox-manufacturers:last-child {
+  margin-bottom: 26px;
 }
 
 .checkbox-manufacturers-label {
@@ -1188,6 +1272,22 @@ height: 42px;
   font-size: 15px;
   text-transform: uppercase;
   color: var(--basic-black);
+}
+
+.checkbox-manufacturers-line {
+  margin-bottom: 18px;
+}
+
+.power-radiobtn-fieldset legend {
+  margin-bottom: 21px;
+}
+
+.power-radiobtn-wrap {
+  margin-bottom: 16px;
+}
+
+.power-radiobtn-wrap:last-child {
+  margin-bottom: 35px;
 }
 
 .power-radiobtn-label {
@@ -1204,6 +1304,25 @@ height: 42px;
 
 .catalog-items-sorting-wrap {
   background-color: var(--basic-filter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 38px;
+  padding-left: 19px;
+  padding-right: 14px;
+  margin-bottom: 28px;
+}
+
+.catalog-items-sorting-wrap h2 {
+  margin: 0;
+}
+
+.catalog-items-sorting-list {
+  margin: 0;
+  padding: 0;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .catalog-items-sorting-wrap h2 {
@@ -1236,7 +1355,14 @@ height: 42px;
 }
 .pagination-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-bottom: 39px;
+}
 
+.pagination-item {
+  margin-right: 20px;
 }
 
 .pagination-item a {
@@ -1251,7 +1377,9 @@ height: 42px;
 
 .about-perforators {
   background-color: var(--basic-background);
-  grid-column: 1/-1;
+  min-height: 261px;
+  padding-top: 64px;
+  padding-bottom: 68px;
 }
 .about-perforators h2 {
   font-size: 30px;
@@ -1306,6 +1434,6 @@ height: 42px;
 
 .catalog-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 220px 1fr 1fr 1fr;
   gap: 20px;
 }
