@@ -1035,6 +1035,7 @@ header {
   font-size: 21px;
   color: var(--white);
   border: none;
+  cursor: pointer;
 }
 
 .services-slider-btn:hover,
