@@ -265,20 +265,23 @@ header {
   height: 42px;
 }
 
-.top-header-item {
-  flex-grow: 1;
-}
-
 
 .top-header-item a {
+  width: 150px;
   position: relative;
   display: flex;
-  flex-shrink: 1;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   color: var(--white);
   height: 42px;
+  font-size: 18px;
+  line-height: 24px;
+  padding-left: 20px;
+}
+
+.top-header-item:last-child a {
+  padding-left: 0;
 }
 
 .cart-with-goods {
@@ -290,7 +293,8 @@ header {
 .top-header-item:nth-child(1) svg,
 .top-header-item:nth-child(2)  svg {
   position: absolute;
-  left: 10px;
+  top: 13px;
+  left: 19px;
   width: 15px;
   height: 15px;
 }
@@ -327,7 +331,7 @@ header {
 }
 
 .main-header {
-  padding-top: 46px;
+  padding-top: 44px;
   padding-bottom: 60px;
   min-height: 278px;
   background-color: var(--basic-background)
@@ -335,24 +339,26 @@ header {
 
 .main-header-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 299px;
 }
 
 .main-header-text {
   margin: 0;
   margin-left: 30px;
   font-style: italic;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 23px;
   color: var(--basic-red);
 }
 
 .main-header-phone-wrap {
   width: 270px;
-  margin-bottom: 40px;
+  margin-bottom: 44px;
+  margin-left: 6px;
 }
 
 .main-header-phone {
+  position: relative;
   display: flex;
   width: 270px;
   height: 45px;
@@ -364,7 +370,18 @@ header {
   font-size: 21px;
   line-height: 30px;
   color: var(--basic-red);
-  margin-bottom: 5px;
+  margin-bottom: 9px;
+  padding-left: 26px;
+}
+
+.main-header-phone::before {
+  content: "";
+  display: block;
+  width: 17.51px;
+  height: 18.97px;
+  background-image: url(../icon/icon-phone.svg);
+  position: absolute;
+  left: 37px;
 }
 
 .main-header-address {
@@ -448,14 +465,80 @@ header {
   color: var(--basic-black);
 }
 
+
+
 .user {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
   background-color: var(--white);
+  font-size: 21px;
+  color: var(--basic-black);
+  margin-bottom: 9px;
 }
 
-.user a {
-  font-size: 21px;
-  text-align: center;
-  color: var(--basic-black);
+.user::before {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 18px;
+  background-image: url(../icon/icon-user.svg);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.user::after {
+  content: "";
+  position: absolute;
+  top: 13;
+  right: 17px;
+  display: block;
+  width: 20px;
+  height: 18px;
+  background-image: url(../icon/icon-login.svg);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.user:hover::before,
+.user:focus::before,
+.user:hover::after,
+.user:focus::after {
+  opacity: 1;
+}
+
+.user:active {
+  color: var(--basic-greylight);
+}
+
+.user:active::before,
+.user:active::after {
+  opacity: 0.3;
+}
+
+.orders-account {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.orders-account-dot::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 134px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, #32425C, #32425C), #FFFFFF;
 }
 
 .orders-account a {
@@ -463,6 +546,15 @@ header {
   font-size: 16px;
   text-align: center;
   color: var(--basic-black-menu);
+}
+
+.orders-account a:hover,
+.orders-account a:focus {
+  color: var(--basic-red);
+}
+
+.orders-account a:active {
+  opacity: 0.3;
 }
 
 .main-header-nav {
@@ -485,6 +577,8 @@ header {
   justify-content: space-around;
   align-items: center;
   min-height: 60px;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
 
