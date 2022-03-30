@@ -14,7 +14,7 @@
     <header>
       <div class="top-header">
         <div class="container top-header-layout">
-          <a class="logo">
+          <a class="logo" href="index.html">
             <div class="logo-wrap">
               <img src="logo/logo-technomart.svg" width="106.83" height="16.9" alt="logo">
             </div>
@@ -92,10 +92,10 @@
       <div class="catalog-grid  container">
         <h1 class="hiden">Каталог</h1>
         <ul class="breadcrumbs">
-          <li class="breadcrumbs-item" ><a href="#"><img src="icon/icon-home.svg" alt="home"></a></li>
-          <li class="breadcrumbs-item" ><a href="#">Каталог</a></li>
-          <li class="breadcrumbs-item" ><a href="#">Инструмент</a></li>
-          <li class="breadcrumbs-item" ><a href="#">Перфораторы</a></li>
+          <li class="breadcrumbs-item"><a href="index.html"><img src="icon/icon-home.svg" alt="home"></a></li>
+          <li class="breadcrumbs-item"><a href="catalog.html">Каталог</a></li>
+          <li class="breadcrumbs-item"><a href="#">Инструмент</a></li>
+          <li class="breadcrumbs-item breadcrumbs-current"><a href="#">Перфораторы</a></li>
         </ul>
         <div class="catalog-title-wrap">
           <h2 class="catalog-title">Перфораторы</h2>
@@ -107,46 +107,52 @@
             </div>
             <fieldset class="filter-range-fieldset">
               <legend>Цена:</legend>
-              <div class="filter-range-wrap">
-                <input class="filter-range" id="filter-price" type="range" name="filter" min="0" max="30000" step="1" value="25000">
-              </div>
-              <div class="filter-range-text-wrap">
-                <div class="filter-range-text-item">
-                 <label><input type="text" name="filter" value="0" placeholder="0"></label>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
                 </div>
-                <div class="filter-range-text--"></div>
-                <div class="filter-range-text-item">
-                  <label><input type="text" name="filter" value="30000" placeholder="30000"></label>
+                <div class="price-controls">
+                  <label class="min-price">
+                    <input type="number" name="min-price" value="0">
+                  </label>
+                  <div class="price-controls-dash"></div>
+                  <label class="max-price">
+                    <input type="number" name="max-price" value="30000">
+                  </label>
                 </div>
               </div>
             </fieldset>
             <div class="filter-line"></div>
             <fieldset class="checkbox-manufacturers-fieldset">
               <legend>Производители:</legend>
-                <input class="checkbox-manufacturers" id="checkbox-BOSCH"  type="checkbox">
+                <input class="checkbox-manufacturers hiden" id="checkbox-BOSCH"  type="checkbox">
                 <label class="checkbox-manufacturers-label" for="checkbox-BOSCH">BOSCH</label><br>
 
-                <input class="checkbox-manufacturers" id="checkbox-ИНТЕРСКОЛ" type="checkbox">
+                <input class="checkbox-manufacturers hiden" id="checkbox-ИНТЕРСКОЛ" type="checkbox">
                 <label class="checkbox-manufacturers-label" for="checkbox-ИНТЕРСКОЛ">ИНТЕРСКОЛ</label><br>
 
-                <input class="checkbox-manufacturers" id="checkbox-MAKITA" type="checkbox">
+                <input class="checkbox-manufacturers hiden" id="checkbox-MAKITA" type="checkbox">
                 <label class="checkbox-manufacturers-label" for="checkbox-MAKITA">MAKITA</label><br>
 
-                <input class="checkbox-manufacturers" id="checkbox-Dewalt" type="checkbox">
+                <input class="checkbox-manufacturers hiden" id="checkbox-Dewalt" type="checkbox">
                 <label class="checkbox-manufacturers-label" for="checkbox-Dewalt">Dewalt</label><br>
 
-                <input class="checkbox-manufacturers" id="checkbox-Hitachi" type="checkbox">
+                <input class="checkbox-manufacturers hiden" id="checkbox-Hitachi" type="checkbox">
                 <label class="checkbox-manufacturers-label" for="checkbox-Hitachi">Hitachi</label>
             </fieldset>
             <div class="filter-line checkbox-manufacturers-line"></div>
             <fieldset class="power-radiobtn-fieldset">
               <legend>Питание:</legend>
               <div class="power-radiobtn-wrap">
-                <input class="power-radiobtn" type="radio" id="power-battery" name="power">
+                <input class="power-radiobtn hiden" type="radio" id="power-battery" name="power">
                 <label class="power-radiobtn-label" for="power-battery">Аккумуляторные</label>
               </div>
               <div class="power-radiobtn-wrap">
-                <input class="power-radiobtn" type="radio" id="power_socket" name="power">
+                <input class="power-radiobtn hiden" type="radio" id="power_socket" name="power">
                 <label class="power-radiobtn-label" for="power_socket">Сетевые</label>
               </div>
             </fieldset>
