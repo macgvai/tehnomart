@@ -866,6 +866,7 @@ header {
 
 .popular-item,
 .catalog-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -874,6 +875,19 @@ header {
   border: 1px solid #EAEAEA;
   width: 220px;
   min-height: 318px;
+}
+
+.popular-item-new::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background-image: url(../icon/catalog-new.svg);
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .popular-item-img {
@@ -1871,7 +1885,7 @@ header {
 .catalog-items-sorting-list {
   margin: 0;
   padding: 0;
-  width: 450px;
+  width: 355px;
   display: flex;
   justify-content: space-between;
 }
@@ -1879,9 +1893,10 @@ header {
 .catalog-items-sorting-wrap h2 {
   font-family: PT Sans;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--basic-black);
   text-transform: uppercase;
+  margin-right: 101px;
 }
 
 .catalog-items-sorting-list {
@@ -1894,16 +1909,40 @@ header {
   font-size: 13px;
   color: var(--catalog-sorting-black);
   text-transform: uppercase;
+  border-bottom: 1px dotted var(--basic-red);
+
 }
 
 .catalog-items-sorting-item:hover a,
 .catalog-items-sorting-item:focus a {
   color: var(--basic-black);
+  border-bottom: 1px solid var(--basic-red);
 }
 
 .catalog-items-sorting-item-activ a {
   color: var(--basic-red);
+  border-bottom: none;
 }
+
+.sort-arr-wrap {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45px;
+}
+
+.sort-arr:hover path ,
+.sort-arr:focus path {
+  fill: var(--basic-black);
+}
+
+.sort-arr-active path {
+  fill: var(--basic-red);
+}
+
 .pagination-list {
   list-style-type: none;
   margin: 0;
