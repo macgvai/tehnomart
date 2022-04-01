@@ -99,7 +99,7 @@
         <section class="suggestions suggestions-layout">
           <h2 class="hiden">Предложения</h2>
           <ul class="suggestions-list">
-            <li class="suggestions-item-material suggestions-item">
+            <li class="suggestions-item-material suggestions-item popular-item-new">
               <h3>Материалы</h3>
               <div class="suggestions-item-link">
                 <a href="#">на любой вкус</a>
@@ -372,32 +372,33 @@
 
 
 
-    <section class="modal">
-      <div class="modal-head"></div>
-      <form class="feedback-form modal-layout" action="post" method="post">
-        <div class="Feedback-name-wrap">
-          <label for="Feedback-name">Ваше имя:</label>
-          <input class="feedback-name" id="Feedback-name" type="text" name="name" placeholder="Имя Фамилия">
-        </div>
-
-        <div class="feedback-mail-wrap">
-          <label for="Feedback-email">Ваш e-mail:</label>
-          <input class="feedback-mail" id="Feedback-email" type="email" name="email" placeholder="email@example.com">
-        </div>
-
-        <div class="feedback-text-wrap">
-          <label for="Feedback-text">Текст письма:</label>
-          <textarea name="text" id="Feedback-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+    <section class="modal modal-feedback">
+      <form class="feedback-form" action="post" method="post">
+        <div class="feedback-form-wrap">
+          <div class="input-wrap">
+            <div class="Feedback-name-wrap">
+              <label for="Feedback-name">Ваше имя:</label>
+              <input class="feedback-name" id="Feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+            </div>
+            <div class="feedback-mail-wrap">
+              <label for="Feedback-email">Ваш e-mail:</label>
+              <input class="feedback-mail" id="Feedback-email" type="email" name="email" placeholder="email@example.com">
+            </div>
+          </div>
+          <div class="feedback-text-wrap">
+            <label for="Feedback-text">Текст письма:</label>
+            <textarea class="feedback-textarea" name="text" id="Feedback-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+          </div>
         </div>
         <div class="modal-bottom">
-                  <button class="btn btn-modal">Отправить</button>
+          <button class="btn btn-modal">Отправить</button>
         </div>
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-map">
-      <map name="map">карта</map>
+      <map class="map" name="map">карта</map>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
