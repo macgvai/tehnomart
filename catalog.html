@@ -77,12 +77,12 @@
           <nav class="main-header-nav">
             <ul class="main-header-nav-list">
               <li><a href="index.html">Главная</a></li>
-              <li><a href="#">Компания</a></li>
+              <li><a href="company.html">Компания</a></li>
               <li><a href="catalog.html">Каталог</a></li>
-              <li><a href="#">Новости</a></li>
-              <li><a href="#">Спецпредложения</a></li>
-              <li><a href="#">Доставка</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="special_offers.html">Спецпредложения</a></li>
+              <li><a href="delivery.html">Доставка</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
             </ul>
           </nav>
         </div>
@@ -90,7 +90,7 @@
     </header>
     <main>
       <div class="catalog-grid  container">
-        <h1 class="hiden">Каталог</h1>
+        <h1 class="visually-hidden">Каталог</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item"><a href="index.html"><img src="icon/icon-home.svg" alt="home"></a></li>
           <li class="breadcrumbs-item"><a href="catalog.html">Каталог</a></li>
@@ -129,31 +129,31 @@
             <div class="filter-line"></div>
             <fieldset class="checkbox-manufacturers-fieldset">
               <legend>Производители:</legend>
-                <input class="checkbox-manufacturers hiden" id="checkbox-BOSCH"  type="checkbox">
+                <input class="checkbox-manufacturers visually-hidden" id="checkbox-BOSCH"  type="checkbox">
                 <label class="checkbox-manufacturers-label" for="checkbox-BOSCH">BOSCH</label><br>
 
-                <input class="checkbox-manufacturers hiden" id="checkbox-ИНТЕРСКОЛ" type="checkbox"
+                <input class="checkbox-manufacturers visually-hidden" id="checkbox-ИНТЕРСКОЛ" type="checkbox"
                 disabled>
                 <label class="checkbox-manufacturers-label" for="checkbox-ИНТЕРСКОЛ">ИНТЕРСКОЛ</label><br>
 
-                <input class="checkbox-manufacturers hiden" id="checkbox-MAKITA" type="checkbox">
+                <input class="checkbox-manufacturers visually-hidden" id="checkbox-MAKITA" type="checkbox">
                 <label class="checkbox-manufacturers-label" for="checkbox-MAKITA">MAKITA</label><br>
 
-                <input class="checkbox-manufacturers hiden" id="checkbox-Dewalt" type="checkbox">
+                <input class="checkbox-manufacturers visually-hidden" id="checkbox-Dewalt" type="checkbox">
                 <label class="checkbox-manufacturers-label" for="checkbox-Dewalt">Dewalt</label><br>
 
-                <input class="checkbox-manufacturers hiden" id="checkbox-Hitachi" type="checkbox">
+                <input class="checkbox-manufacturers visually-hidden" id="checkbox-Hitachi" type="checkbox">
                 <label class="checkbox-manufacturers-label" for="checkbox-Hitachi">Hitachi</label>
             </fieldset>
             <div class="filter-line checkbox-manufacturers-line"></div>
             <fieldset class="power-radiobtn-fieldset">
               <legend>Питание:</legend>
               <div class="power-radiobtn-wrap">
-                <input class="power-radiobtn hiden" type="radio" id="power-battery" name="power">
+                <input class="power-radiobtn visually-hidden" type="radio" id="power-battery" name="power">
                 <label class="power-radiobtn-label" for="power-battery">Аккумуляторные</label>
               </div>
               <div class="power-radiobtn-wrap">
-                <input class="power-radiobtn hiden" type="radio" id="power_socket" name="power">
+                <input class="power-radiobtn visually-hidden" type="radio" id="power_socket" name="power">
                 <label class="power-radiobtn-label" for="power_socket">Сетевые</label>
               </div>
             </fieldset>
@@ -354,7 +354,7 @@
         <div class="container">
 
           <h2>Пара слов о перфораторах</h2>
-          <p>Перфоратор  &minus; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
+          <p>Перфоратор  &ndash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
             Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. <br>
             В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
           </div>
@@ -363,7 +363,7 @@
     <footer class="main-footer">
       <div class="top-footer">
         <div class="container top-footer-layout">
-          <h2 class="hiden">Контакты</h2>
+          <h2 class="visually-hidden">Контакты</h2>
           <a href="index.html" class="logo">
             <div class="logo-wrap logo-bottom">
               <img src="logo/logo-technomart.svg" width="136.5" height="21.6" alt="logo">
@@ -371,11 +371,11 @@
           </a>
           <nav class="top-footer-nav">
             <ul class="top-footer-nav-list">
-              <li><a href="#">Компания</a></li>
-              <li><a href="#">Новости</a></li>
+              <li><a href="company.html">Компания</a></li>
+              <li><a href="news.html">Новости</a></li>
               <li><a href="catalog.html">Каталог</a></li>
-              <li><a href="#">Доставка</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="delivery.html">Доставка</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
             </ul>
           </nav>
           <div class="top-footer-wrap">
@@ -415,13 +415,15 @@
       </div>
     </footer>
 
-    <section class="modal add-to-cart">
+    <section class="modal add-to-cart display-none">
       <p class="add-to-cart-main">Товар добавлен в корзину!</p>
       <ul class="add-to-cart-list">
         <li><a class="btn add-to-cart-item" href="#">оформить заказ</a></li>
         <li><a class="btn add-to-cart-item continue-shopping" href="#">продолжить покупки</a></li>
       </ul>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
 
   </body>
