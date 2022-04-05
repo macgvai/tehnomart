@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="icon/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icon/favicon/180.png">
@@ -14,7 +14,7 @@
     <header>
       <div class="top-header">
         <div class="container top-header-layout">
-          <a class="logo" href="index.html">
+          <a class="logo header-logo" href="index.html">
             <div class="logo-wrap">
               <img class="logo-img" src="logo/logo-technomart.svg" width="106.83" height="16.9" alt="logo">
             </div>
@@ -61,7 +61,7 @@
       <div class="main-header ">
         <div class="container main-header-layout">
           <h2 class="main-header-text">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</h2>
-          <div class="main-header-phone-wrap">
+          <div class="main-header-phone-wrap main-header-phone-wrap-catalog">
             <a class="main-header-phone" href="tel:+78005558628">
             +7 800 555-86-28</a>
             <p class="main-header-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
@@ -129,21 +129,29 @@
             <div class="filter-line"></div>
             <fieldset class="checkbox-manufacturers-fieldset">
               <legend>Производители:</legend>
-                <input class="checkbox-manufacturers visually-hidden" id="checkbox-BOSCH"  type="checkbox">
-                <label class="checkbox-manufacturers-label" for="checkbox-BOSCH">BOSCH</label><br>
-
-                <input class="checkbox-manufacturers visually-hidden" id="checkbox-ИНТЕРСКОЛ" type="checkbox"
-                disabled>
-                <label class="checkbox-manufacturers-label" for="checkbox-ИНТЕРСКОЛ">ИНТЕРСКОЛ</label><br>
-
-                <input class="checkbox-manufacturers visually-hidden" id="checkbox-MAKITA" type="checkbox">
-                <label class="checkbox-manufacturers-label" for="checkbox-MAKITA">MAKITA</label><br>
-
-                <input class="checkbox-manufacturers visually-hidden" id="checkbox-Dewalt" type="checkbox">
-                <label class="checkbox-manufacturers-label" for="checkbox-Dewalt">Dewalt</label><br>
-
-                <input class="checkbox-manufacturers visually-hidden" id="checkbox-Hitachi" type="checkbox">
-                <label class="checkbox-manufacturers-label" for="checkbox-Hitachi">Hitachi</label>
+                <ul class="checkbox-manufacturers-ul">
+                  <li class="checkbox-manufacturers-li">
+                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-BOSCH"  type="checkbox">
+                   <label class="checkbox-manufacturers-label" for="checkbox-BOSCH">BOSCH</label>
+                  </li>
+                  <li class="checkbox-manufacturers-li">
+                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-ИНТЕРСКОЛ" type="checkbox"
+                    disabled>
+                    <label class="checkbox-manufacturers-label" for="checkbox-ИНТЕРСКОЛ">ИНТЕРСКОЛ</label>
+                  </li>
+                  <li class="checkbox-manufacturers-li">
+                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-MAKITA" type="checkbox">
+                    <label class="checkbox-manufacturers-label" for="checkbox-MAKITA">MAKITA</label>
+                  </li>
+                  <li class="checkbox-manufacturers-li">
+                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-Dewalt" type="checkbox">
+                    <label class="checkbox-manufacturers-label" for="checkbox-Dewalt">Dewalt</label>
+                  </li>
+                  <li class="checkbox-manufacturers-li">
+                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-Hitachi" type="checkbox">
+                    <label class="checkbox-manufacturers-label" for="checkbox-Hitachi">Hitachi</label>
+                  </li>
+                </ul>
             </fieldset>
             <div class="filter-line checkbox-manufacturers-line"></div>
             <fieldset class="power-radiobtn-fieldset">
