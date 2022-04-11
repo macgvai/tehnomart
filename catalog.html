@@ -101,7 +101,7 @@
           <h2 class="catalog-title">Перфораторы</h2>
         </div>
         <section>
-          <form class="filter" action="post">
+          <form class="filter" method="get" action="https://echo.htmlacademy.ru" >
             <div class="filter-title">
               <p>фильтр:</p>
             </div>
@@ -131,24 +131,24 @@
               <legend>Производители:</legend>
                 <ul class="checkbox-manufacturers-ul">
                   <li class="checkbox-manufacturers-li">
-                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-BOSCH"  type="checkbox">
-                   <label class="checkbox-manufacturers-label" for="checkbox-BOSCH">BOSCH</label>
+                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-BOSCH"  name="BOSCH" type="checkbox">
+                    <label class="checkbox-manufacturers-label" for="checkbox-BOSCH">BOSCH</label>
                   </li>
                   <li class="checkbox-manufacturers-li">
-                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-ИНТЕРСКОЛ" type="checkbox"
+                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-interskol" name="interskol" type="checkbox"
                     disabled>
-                    <label class="checkbox-manufacturers-label" for="checkbox-ИНТЕРСКОЛ">ИНТЕРСКОЛ</label>
+                    <label class="checkbox-manufacturers-label" for="checkbox-interskol">ИНТЕРСКОЛ</label>
                   </li>
                   <li class="checkbox-manufacturers-li">
-                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-MAKITA" type="checkbox">
+                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-MAKITA" type="checkbox" name="MAKITA" checked>
                     <label class="checkbox-manufacturers-label" for="checkbox-MAKITA">MAKITA</label>
                   </li>
                   <li class="checkbox-manufacturers-li">
-                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-Dewalt" type="checkbox">
+                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-Dewalt" name="Dewalt" type="checkbox">
                     <label class="checkbox-manufacturers-label" for="checkbox-Dewalt">Dewalt</label>
                   </li>
                   <li class="checkbox-manufacturers-li">
-                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-Hitachi" type="checkbox">
+                    <input class="checkbox-manufacturers visually-hidden" id="checkbox-Hitachi" name="Hitachi" type="checkbox">
                     <label class="checkbox-manufacturers-label" for="checkbox-Hitachi">Hitachi</label>
                   </li>
                 </ul>
@@ -157,15 +157,15 @@
             <fieldset class="power-radiobtn-fieldset">
               <legend>Питание:</legend>
               <div class="power-radiobtn-wrap">
-                <input class="power-radiobtn visually-hidden" type="radio" id="power-battery" name="power">
+                <input class="power-radiobtn visually-hidden" type="radio" id="power-battery" name="power" value="battery" checked>
                 <label class="power-radiobtn-label" for="power-battery">Аккумуляторные</label>
               </div>
               <div class="power-radiobtn-wrap">
-                <input class="power-radiobtn visually-hidden" type="radio" id="power_socket" name="power">
+                <input class="power-radiobtn visually-hidden" type="radio" id="power_socket" name="power" value="socket">
                 <label class="power-radiobtn-label" for="power_socket">Сетевые</label>
               </div>
             </fieldset>
-            <button class="btn-filter">показать</button>
+            <button class="btn-filter" type="submit">показать</button>
           </form>
         </section>
         <section class="catalog-items">
