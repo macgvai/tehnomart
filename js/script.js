@@ -3,33 +3,68 @@ let modalFeedbackShow = document.querySelector('.btn-delivery-contacts');
 let modalFeedbackClose = modalFeedback.querySelector('.modal-close');
 let modalFeedbackName = modalFeedback.querySelector('.feedback-name');
 let modalFeedbackEmail = modalFeedback.querySelector('.feedback-mail');
+let modalFeedbackText = modalFeedback.querySelector('.feedback-textarea');
 let modalFeedbackForm = modalFeedback.querySelector('.feedback-form');
 
-let modalMap = document.querySelector('.modal-map');
-let modalMapShow = document.querySelector('.img-map');
-let modalMapClose = modalMap.querySelector('.modal-close');
+let isStorageSupport = true;
+let storage = "";
 
-
+try {
+  storage = localStorage.getItem("name");
+  storageEmail = localStorage.getItem("email");
+} catch (err) {
+  isStorageSupport = false;
+}
 
 modalFeedbackShow.addEventListener('click', function() {
   modalFeedback.classList.add('modal-show');
-  modalFeedbackName.focus();
+  if (storage || storageEmail) {
+    modalFeedbackName.value = storage;
+    modalFeedbackEmail.value = storageEmail;
+    modalFeedbackText.focus();
+  } else {
+    modalFeedbackName.focus();
+  }
+});
+
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (modalFeedback.classList.contains("modal-show") || modalMap.classList.contains("modal-show")) {
+      evt.preventDefault();
+      modalFeedback.classList.remove("modal-show");
+      modalFeedback.classList.remove("modal-error");
+      modalMap.classList.remove("modal-show");
+    }
+  }
 });
 
 modalFeedbackClose.addEventListener('click', function() {
   modalFeedback.classList.remove('modal-show');
+  modalFeedback.classList.remove("modal-error");
 });
 
 modalFeedbackForm.addEventListener('submit', function (evt) {
-  if (!modalFeedbackName.value || !modalFeedbackEmail.value) {
+  if (!modalFeedbackName.value || !modalFeedbackEmail.value || !modalFeedbackText.value) {
     evt.preventDefault();
-    console.log("Нужно ввести логин и пароль");
+    modalFeedback.classList.remove("modal-error");
+    modalFeedback.offsetWidth = modalFeedback.offsetWidth;
+    modalFeedback.classList.add("modal-error");
+    } else {
+    if (isStorageSupport) {
+      localStorage.setItem("name", modalFeedbackName.value);
+      localStorage.setItem("email", modalFeedbackEmail.value);    }
   }
-
 });
 
 
-modalMapShow.addEventListener('click', function () {
+
+let modalMap = document.querySelector('.modal-map');
+let modalMapShow = document.querySelector('.link-map');
+let modalMapClose = modalMap.querySelector('.modal-close');
+
+modalMapShow.addEventListener('click', function (evt) {
+  evt.preventDefault();
   modalMap.classList.add('modal-show');
 });
 
