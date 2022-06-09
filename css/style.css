@@ -2256,6 +2256,7 @@ header {
 
 
 .add-to-cart  {
+  display: none;
   height: 276px;
   width: 620px;
 }

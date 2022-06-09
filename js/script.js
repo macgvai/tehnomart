@@ -72,6 +72,29 @@ modalMapClose.addEventListener('click', function () {
   modalMap.classList.remove('modal-show');
 });
 
+let modalCartBtn = document.querySelector('.item-buy-btn');
+let modalCart = document.querySelector('.add-to-cart');
+let modalCartClose = modalCart.querySelector('.modal-close');
+
+modalCartBtn.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  modalCart.classList.add('modal-show');
+});
+
+modalCartClose.addEventListener('click', function () {
+  modalCart.classList.remove('modal-show');
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 // var link = document.querySelector(".btn_popup");
