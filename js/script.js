@@ -6,6 +6,7 @@ let modalFeedbackEmail = modalFeedback.querySelector('.feedback-mail');
 let modalFeedbackText = modalFeedback.querySelector('.feedback-textarea');
 let modalFeedbackForm = modalFeedback.querySelector('.feedback-form');
 
+
 let isStorageSupport = true;
 let storage = "";
 
@@ -30,11 +31,12 @@ modalFeedbackShow.addEventListener('click', function() {
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (modalFeedback.classList.contains("modal-show") || modalMap.classList.contains("modal-show")) {
+    if (modalFeedback.classList.contains("modal-show") || modalMap.classList.contains("modal-show") || modalCart.classList.contains("modal-show")) {
       evt.preventDefault();
       modalFeedback.classList.remove("modal-show");
       modalFeedback.classList.remove("modal-error");
       modalMap.classList.remove("modal-show");
+      modalCart.classList.remove("modal-show");
     }
   }
 });
@@ -53,7 +55,8 @@ modalFeedbackForm.addEventListener('submit', function (evt) {
     } else {
     if (isStorageSupport) {
       localStorage.setItem("name", modalFeedbackName.value);
-      localStorage.setItem("email", modalFeedbackEmail.value);    }
+      localStorage.setItem("email", modalFeedbackEmail.value);
+    }
   }
 });
 
@@ -72,19 +75,23 @@ modalMapClose.addEventListener('click', function () {
   modalMap.classList.remove('modal-show');
 });
 
-let modalCartBtn = document.querySelector('.item-buy-btn');
+
+
+let modalCartBtn = document.querySelectorAll('.item-buy-btn');
 let modalCart = document.querySelector('.add-to-cart');
 let modalCartClose = modalCart.querySelector('.modal-close');
 
-modalCartBtn.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  modalCart.classList.add('modal-show');
-});
+
+for (let i = 0; i < modalCartBtn.length; i++) {
+  modalCartBtn[i].addEventListener('click', function (evt) {
+    evt.preventDefault();
+    modalCart.classList.add('modal-show');
+  });
+}
 
 modalCartClose.addEventListener('click', function () {
   modalCart.classList.remove('modal-show');
 });
-
 
 
 
