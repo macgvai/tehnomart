@@ -947,6 +947,7 @@ header {
   background-image: url(../icon/catalog-new.svg);
   background-repeat: no-repeat;
   z-index: 1;
+  pointer-events: none;
 }
 
 .popular-item-img {
@@ -1024,11 +1025,9 @@ header {
 }
 
 .popular-item-hover-buy-btn a {
-  display: flex;
+  display: block;
+  padding: 13px;
   align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
   font-size: 14px;
   text-transform: uppercase;
   color: var(--white);
