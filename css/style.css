@@ -1255,8 +1255,8 @@ header {
 .services-descr-item {
   min-height: 185px;
   margin-left: 80px;
-  width: 700px;
-  padding-right: 379px;
+  /* width: 700px;
+  padding-right: 379px; */
 }
 
 .services-descr-item-delivery {
